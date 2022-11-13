@@ -107,6 +107,15 @@ class musikListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by musikParser#NotT.
+    def enterNotT(self, ctx:musikParser.NotTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#NotT.
+    def exitNotT(self, ctx:musikParser.NotTContext):
+        pass
+
+
     # Enter a parse tree produced by musikParser#MinusT.
     def enterMinusT(self, ctx:musikParser.MinusTContext):
         pass

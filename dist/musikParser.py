@@ -10,47 +10,47 @@ else:
 
 def serializedATN():
     return [
-        4,1,29,120,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,30,122,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,1,0,1,0,4,0,19,8,0,11,0,12,0,20,1,0,1,0,1,1,1,1,1,1,1,
         1,1,1,1,2,1,2,1,2,4,2,33,8,2,11,2,12,2,34,1,2,1,2,1,3,1,3,1,3,1,
         3,4,3,43,8,3,11,3,12,3,44,1,3,1,3,1,3,1,3,1,3,1,3,1,3,3,3,54,8,3,
-        1,4,1,4,3,4,58,8,4,1,5,1,5,1,5,3,5,63,8,5,1,5,1,5,1,5,1,5,1,5,1,
-        5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,80,8,5,10,5,12,5,83,9,
-        5,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,
-        6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,3,6,108,8,6,1,7,1,7,1,7,1,7,1,7,1,
-        7,1,7,1,7,3,7,118,8,7,1,7,0,1,10,8,0,2,4,6,8,10,12,14,0,0,135,0,
-        18,1,0,0,0,2,24,1,0,0,0,4,29,1,0,0,0,6,53,1,0,0,0,8,57,1,0,0,0,10,
-        62,1,0,0,0,12,107,1,0,0,0,14,117,1,0,0,0,16,19,3,2,1,0,17,19,3,4,
-        2,0,18,16,1,0,0,0,18,17,1,0,0,0,19,20,1,0,0,0,20,18,1,0,0,0,20,21,
-        1,0,0,0,21,22,1,0,0,0,22,23,5,0,0,1,23,1,1,0,0,0,24,25,5,1,0,0,25,
-        26,5,23,0,0,26,27,5,2,0,0,27,28,3,8,4,0,28,3,1,0,0,0,29,30,5,3,0,
-        0,30,32,5,4,0,0,31,33,3,6,3,0,32,31,1,0,0,0,33,34,1,0,0,0,34,32,
-        1,0,0,0,34,35,1,0,0,0,35,36,1,0,0,0,36,37,5,5,0,0,37,5,1,0,0,0,38,
-        39,5,6,0,0,39,40,3,10,5,0,40,42,5,4,0,0,41,43,3,6,3,0,42,41,1,0,
-        0,0,43,44,1,0,0,0,44,42,1,0,0,0,44,45,1,0,0,0,45,46,1,0,0,0,46,47,
-        5,5,0,0,47,54,1,0,0,0,48,49,5,23,0,0,49,50,5,2,0,0,50,54,3,8,4,0,
-        51,54,3,14,7,0,52,54,3,8,4,0,53,38,1,0,0,0,53,48,1,0,0,0,53,51,1,
-        0,0,0,53,52,1,0,0,0,54,7,1,0,0,0,55,58,3,10,5,0,56,58,3,12,6,0,57,
-        55,1,0,0,0,57,56,1,0,0,0,58,9,1,0,0,0,59,60,6,5,-1,0,60,63,5,23,
-        0,0,61,63,5,24,0,0,62,59,1,0,0,0,62,61,1,0,0,0,63,81,1,0,0,0,64,
-        65,10,6,0,0,65,66,5,7,0,0,66,80,3,10,5,7,67,68,10,5,0,0,68,69,5,
-        8,0,0,69,80,3,10,5,6,70,71,10,4,0,0,71,72,5,9,0,0,72,80,3,10,5,5,
-        73,74,10,3,0,0,74,75,5,10,0,0,75,80,3,10,5,4,76,77,10,2,0,0,77,78,
-        5,11,0,0,78,80,3,10,5,3,79,64,1,0,0,0,79,67,1,0,0,0,79,70,1,0,0,
-        0,79,73,1,0,0,0,79,76,1,0,0,0,80,83,1,0,0,0,81,79,1,0,0,0,81,82,
-        1,0,0,0,82,11,1,0,0,0,83,81,1,0,0,0,84,108,5,23,0,0,85,86,5,12,0,
-        0,86,108,3,10,5,0,87,88,5,13,0,0,88,108,3,10,5,0,89,90,5,14,0,0,
-        90,108,3,10,5,0,91,92,5,15,0,0,92,108,3,10,5,0,93,94,5,16,0,0,94,
-        108,3,10,5,0,95,96,5,17,0,0,96,97,3,12,6,0,97,98,3,12,6,0,98,108,
-        1,0,0,0,99,100,5,18,0,0,100,101,3,12,6,0,101,102,3,10,5,0,102,108,
-        1,0,0,0,103,104,5,19,0,0,104,105,3,12,6,0,105,106,3,10,5,0,106,108,
-        1,0,0,0,107,84,1,0,0,0,107,85,1,0,0,0,107,87,1,0,0,0,107,89,1,0,
-        0,0,107,91,1,0,0,0,107,93,1,0,0,0,107,95,1,0,0,0,107,99,1,0,0,0,
-        107,103,1,0,0,0,108,13,1,0,0,0,109,110,5,20,0,0,110,118,3,10,5,0,
-        111,112,5,21,0,0,112,113,3,12,6,0,113,114,3,10,5,0,114,118,1,0,0,
-        0,115,116,5,22,0,0,116,118,3,6,3,0,117,109,1,0,0,0,117,111,1,0,0,
-        0,117,115,1,0,0,0,118,15,1,0,0,0,11,18,20,34,44,53,57,62,79,81,107,
-        117
+        1,4,1,4,3,4,58,8,4,1,5,1,5,1,5,1,5,1,5,3,5,65,8,5,1,5,1,5,1,5,1,
+        5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,82,8,5,10,5,12,
+        5,85,9,5,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,
+        1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,3,6,110,8,6,1,7,1,7,1,7,1,7,
+        1,7,1,7,1,7,1,7,3,7,120,8,7,1,7,0,1,10,8,0,2,4,6,8,10,12,14,0,0,
+        138,0,18,1,0,0,0,2,24,1,0,0,0,4,29,1,0,0,0,6,53,1,0,0,0,8,57,1,0,
+        0,0,10,64,1,0,0,0,12,109,1,0,0,0,14,119,1,0,0,0,16,19,3,2,1,0,17,
+        19,3,4,2,0,18,16,1,0,0,0,18,17,1,0,0,0,19,20,1,0,0,0,20,18,1,0,0,
+        0,20,21,1,0,0,0,21,22,1,0,0,0,22,23,5,0,0,1,23,1,1,0,0,0,24,25,5,
+        1,0,0,25,26,5,24,0,0,26,27,5,2,0,0,27,28,3,8,4,0,28,3,1,0,0,0,29,
+        30,5,3,0,0,30,32,5,4,0,0,31,33,3,6,3,0,32,31,1,0,0,0,33,34,1,0,0,
+        0,34,32,1,0,0,0,34,35,1,0,0,0,35,36,1,0,0,0,36,37,5,5,0,0,37,5,1,
+        0,0,0,38,39,5,6,0,0,39,40,3,10,5,0,40,42,5,4,0,0,41,43,3,6,3,0,42,
+        41,1,0,0,0,43,44,1,0,0,0,44,42,1,0,0,0,44,45,1,0,0,0,45,46,1,0,0,
+        0,46,47,5,5,0,0,47,54,1,0,0,0,48,49,5,24,0,0,49,50,5,2,0,0,50,54,
+        3,8,4,0,51,54,3,14,7,0,52,54,3,8,4,0,53,38,1,0,0,0,53,48,1,0,0,0,
+        53,51,1,0,0,0,53,52,1,0,0,0,54,7,1,0,0,0,55,58,3,10,5,0,56,58,3,
+        12,6,0,57,55,1,0,0,0,57,56,1,0,0,0,58,9,1,0,0,0,59,60,6,5,-1,0,60,
+        65,5,24,0,0,61,65,5,25,0,0,62,63,5,12,0,0,63,65,3,10,5,1,64,59,1,
+        0,0,0,64,61,1,0,0,0,64,62,1,0,0,0,65,83,1,0,0,0,66,67,10,7,0,0,67,
+        68,5,7,0,0,68,82,3,10,5,8,69,70,10,6,0,0,70,71,5,8,0,0,71,82,3,10,
+        5,7,72,73,10,5,0,0,73,74,5,9,0,0,74,82,3,10,5,6,75,76,10,4,0,0,76,
+        77,5,10,0,0,77,82,3,10,5,5,78,79,10,3,0,0,79,80,5,11,0,0,80,82,3,
+        10,5,4,81,66,1,0,0,0,81,69,1,0,0,0,81,72,1,0,0,0,81,75,1,0,0,0,81,
+        78,1,0,0,0,82,85,1,0,0,0,83,81,1,0,0,0,83,84,1,0,0,0,84,11,1,0,0,
+        0,85,83,1,0,0,0,86,110,5,24,0,0,87,88,5,13,0,0,88,110,3,10,5,0,89,
+        90,5,14,0,0,90,110,3,10,5,0,91,92,5,15,0,0,92,110,3,10,5,0,93,94,
+        5,16,0,0,94,110,3,10,5,0,95,96,5,17,0,0,96,110,3,10,5,0,97,98,5,
+        18,0,0,98,99,3,12,6,0,99,100,3,12,6,0,100,110,1,0,0,0,101,102,5,
+        19,0,0,102,103,3,12,6,0,103,104,3,10,5,0,104,110,1,0,0,0,105,106,
+        5,20,0,0,106,107,3,12,6,0,107,108,3,10,5,0,108,110,1,0,0,0,109,86,
+        1,0,0,0,109,87,1,0,0,0,109,89,1,0,0,0,109,91,1,0,0,0,109,93,1,0,
+        0,0,109,95,1,0,0,0,109,97,1,0,0,0,109,101,1,0,0,0,109,105,1,0,0,
+        0,110,13,1,0,0,0,111,112,5,21,0,0,112,120,3,10,5,0,113,114,5,22,
+        0,0,114,115,3,12,6,0,115,116,3,10,5,0,116,120,1,0,0,0,117,118,5,
+        23,0,0,118,120,3,6,3,0,119,111,1,0,0,0,119,113,1,0,0,0,119,117,1,
+        0,0,0,120,15,1,0,0,0,11,18,20,34,44,53,57,64,81,83,109,119
     ]
 
 class musikParser ( Parser ):
@@ -64,19 +64,20 @@ class musikParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'let'", "'='", "'loop'", "'{'", "'}'", 
-                     "'if'", "'*'", "'/'", "'%'", "'+'", "'-'", "'sin_wave'", 
-                     "'square_wave'", "'noise_wave'", "'saw_wave'", "'triangle_wave'", 
-                     "'mix'", "'pitch_shift'", "'pitch_shift_semi'", "'sleep'", 
-                     "'play'", "'print'", "<INVALID>", "<INVALID>", "'int'", 
-                     "'sound'" ]
+                     "'if'", "'*'", "'/'", "'%'", "'+'", "'-'", "'not'", 
+                     "'sin_wave'", "'square_wave'", "'noise_wave'", "'saw_wave'", 
+                     "'triangle_wave'", "'mix'", "'pitch_shift'", "'pitch_shift_semi'", 
+                     "'sleep'", "'play'", "'print'", "<INVALID>", "<INVALID>", 
+                     "'int'", "'sound'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "ID", "NUM", 
-                      "INT_TYPE", "SOUND_TYPE", "COMMENT", "WS", "NEW_LINE" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "ID", "NUM", "INT_TYPE", "SOUND_TYPE", "COMMENT", 
+                      "WS", "NEW_LINE" ]
 
     RULE_prog = 0
     RULE_decl = 1
@@ -113,13 +114,14 @@ class musikParser ( Parser ):
     T__19=20
     T__20=21
     T__21=22
-    ID=23
-    NUM=24
-    INT_TYPE=25
-    SOUND_TYPE=26
-    COMMENT=27
-    WS=28
-    NEW_LINE=29
+    T__22=23
+    ID=24
+    NUM=25
+    INT_TYPE=26
+    SOUND_TYPE=27
+    COMMENT=28
+    WS=29
+    NEW_LINE=30
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -352,7 +354,7 @@ class musikParser ( Parser ):
                 self.state = 34 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (((_la) & ~0x3f) == 0 and ((1 << _la) & 33550400) != 0):
+                if not (((_la) & ~0x3f) == 0 and ((1 << _la) & 67104832) != 0):
                     break
 
             self.state = 36
@@ -519,7 +521,7 @@ class musikParser ( Parser ):
                     self.state = 44 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (((_la) & ~0x3f) == 0 and ((1 << _la) & 33550400) != 0):
+                    if not (((_la) & ~0x3f) == 0 and ((1 << _la) & 67104832) != 0):
                         break
 
                 self.state = 46
@@ -729,6 +731,31 @@ class musikParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class NotTContext(NumContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a musikParser.NumContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def num(self):
+            return self.getTypedRuleContext(musikParser.NumContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterNotT" ):
+                listener.enterNotT(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitNotT" ):
+                listener.exitNotT(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNotT" ):
+                return visitor.visitNotT(self)
+            else:
+                return visitor.visitChildren(self)
+
+
     class MinusTContext(NumContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a musikParser.NumContext
@@ -875,10 +902,10 @@ class musikParser ( Parser ):
         self.enterRecursionRule(localctx, 10, self.RULE_num, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 62
+            self.state = 64
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [23]:
+            if token in [24]:
                 localctx = musikParser.IdNumTContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
@@ -886,18 +913,27 @@ class musikParser ( Parser ):
                 self.state = 60
                 self.match(musikParser.ID)
                 pass
-            elif token in [24]:
+            elif token in [25]:
                 localctx = musikParser.NumValTContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 61
                 self.match(musikParser.NUM)
                 pass
+            elif token in [12]:
+                localctx = musikParser.NotTContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 62
+                self.match(musikParser.T__11)
+                self.state = 63
+                self.num(1)
+                pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 81
+            self.state = 83
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -905,76 +941,76 @@ class musikParser ( Parser ):
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 79
+                    self.state = 81
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
                     if la_ == 1:
                         localctx = musikParser.MultTContext(self, musikParser.NumContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_num)
-                        self.state = 64
-                        if not self.precpred(self._ctx, 6):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
-                        self.state = 65
-                        self.match(musikParser.T__6)
                         self.state = 66
-                        self.num(7)
+                        if not self.precpred(self._ctx, 7):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
+                        self.state = 67
+                        self.match(musikParser.T__6)
+                        self.state = 68
+                        self.num(8)
                         pass
 
                     elif la_ == 2:
                         localctx = musikParser.DivTContext(self, musikParser.NumContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_num)
-                        self.state = 67
-                        if not self.precpred(self._ctx, 5):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 68
-                        self.match(musikParser.T__7)
                         self.state = 69
-                        self.num(6)
+                        if not self.precpred(self._ctx, 6):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
+                        self.state = 70
+                        self.match(musikParser.T__7)
+                        self.state = 71
+                        self.num(7)
                         pass
 
                     elif la_ == 3:
                         localctx = musikParser.ModTContext(self, musikParser.NumContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_num)
-                        self.state = 70
-                        if not self.precpred(self._ctx, 4):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 71
-                        self.match(musikParser.T__8)
                         self.state = 72
-                        self.num(5)
+                        if not self.precpred(self._ctx, 5):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
+                        self.state = 73
+                        self.match(musikParser.T__8)
+                        self.state = 74
+                        self.num(6)
                         pass
 
                     elif la_ == 4:
                         localctx = musikParser.AddTContext(self, musikParser.NumContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_num)
-                        self.state = 73
-                        if not self.precpred(self._ctx, 3):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
-                        self.state = 74
-                        self.match(musikParser.T__9)
                         self.state = 75
-                        self.num(4)
+                        if not self.precpred(self._ctx, 4):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
+                        self.state = 76
+                        self.match(musikParser.T__9)
+                        self.state = 77
+                        self.num(5)
                         pass
 
                     elif la_ == 5:
                         localctx = musikParser.MinusTContext(self, musikParser.NumContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_num)
-                        self.state = 76
-                        if not self.precpred(self._ctx, 2):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                        self.state = 77
-                        self.match(musikParser.T__10)
                         self.state = 78
-                        self.num(3)
+                        if not self.precpred(self._ctx, 3):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
+                        self.state = 79
+                        self.match(musikParser.T__10)
+                        self.state = 80
+                        self.num(4)
                         pass
 
              
-                self.state = 83
+                self.state = 85
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
 
@@ -1243,83 +1279,83 @@ class musikParser ( Parser ):
         localctx = musikParser.SoundContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_sound)
         try:
-            self.state = 107
+            self.state = 109
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [23]:
+            if token in [24]:
                 localctx = musikParser.IdSoundTContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 84
+                self.state = 86
                 self.match(musikParser.ID)
                 pass
-            elif token in [12]:
+            elif token in [13]:
                 localctx = musikParser.SinWaveTContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 85
-                self.match(musikParser.T__11)
-                self.state = 86
-                self.num(0)
-                pass
-            elif token in [13]:
-                localctx = musikParser.SquareWaveTContext(self, localctx)
-                self.enterOuterAlt(localctx, 3)
                 self.state = 87
                 self.match(musikParser.T__12)
                 self.state = 88
                 self.num(0)
                 pass
             elif token in [14]:
-                localctx = musikParser.NoiseWaveTContext(self, localctx)
-                self.enterOuterAlt(localctx, 4)
+                localctx = musikParser.SquareWaveTContext(self, localctx)
+                self.enterOuterAlt(localctx, 3)
                 self.state = 89
                 self.match(musikParser.T__13)
                 self.state = 90
                 self.num(0)
                 pass
             elif token in [15]:
-                localctx = musikParser.SawWaveTContext(self, localctx)
-                self.enterOuterAlt(localctx, 5)
+                localctx = musikParser.NoiseWaveTContext(self, localctx)
+                self.enterOuterAlt(localctx, 4)
                 self.state = 91
                 self.match(musikParser.T__14)
                 self.state = 92
                 self.num(0)
                 pass
             elif token in [16]:
-                localctx = musikParser.TriangleWaveTContext(self, localctx)
-                self.enterOuterAlt(localctx, 6)
+                localctx = musikParser.SawWaveTContext(self, localctx)
+                self.enterOuterAlt(localctx, 5)
                 self.state = 93
                 self.match(musikParser.T__15)
                 self.state = 94
                 self.num(0)
                 pass
             elif token in [17]:
-                localctx = musikParser.MixTContext(self, localctx)
-                self.enterOuterAlt(localctx, 7)
+                localctx = musikParser.TriangleWaveTContext(self, localctx)
+                self.enterOuterAlt(localctx, 6)
                 self.state = 95
                 self.match(musikParser.T__16)
                 self.state = 96
-                self.sound()
-                self.state = 97
-                self.sound()
-                pass
-            elif token in [18]:
-                localctx = musikParser.PitchShiftTContext(self, localctx)
-                self.enterOuterAlt(localctx, 8)
-                self.state = 99
-                self.match(musikParser.T__17)
-                self.state = 100
-                self.sound()
-                self.state = 101
                 self.num(0)
                 pass
+            elif token in [18]:
+                localctx = musikParser.MixTContext(self, localctx)
+                self.enterOuterAlt(localctx, 7)
+                self.state = 97
+                self.match(musikParser.T__17)
+                self.state = 98
+                self.sound()
+                self.state = 99
+                self.sound()
+                pass
             elif token in [19]:
+                localctx = musikParser.PitchShiftTContext(self, localctx)
+                self.enterOuterAlt(localctx, 8)
+                self.state = 101
+                self.match(musikParser.T__18)
+                self.state = 102
+                self.sound()
+                self.state = 103
+                self.num(0)
+                pass
+            elif token in [20]:
                 localctx = musikParser.PitchShiftSemiTContext(self, localctx)
                 self.enterOuterAlt(localctx, 9)
-                self.state = 103
-                self.match(musikParser.T__18)
-                self.state = 104
-                self.sound()
                 self.state = 105
+                self.match(musikParser.T__19)
+                self.state = 106
+                self.sound()
+                self.state = 107
                 self.num(0)
                 pass
             else:
@@ -1435,33 +1471,33 @@ class musikParser ( Parser ):
         localctx = musikParser.FuncContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_func)
         try:
-            self.state = 117
+            self.state = 119
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [20]:
+            if token in [21]:
                 localctx = musikParser.SleepTContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 109
-                self.match(musikParser.T__19)
-                self.state = 110
-                self.num(0)
-                pass
-            elif token in [21]:
-                localctx = musikParser.PlayTContext(self, localctx)
-                self.enterOuterAlt(localctx, 2)
                 self.state = 111
                 self.match(musikParser.T__20)
                 self.state = 112
-                self.sound()
-                self.state = 113
                 self.num(0)
                 pass
             elif token in [22]:
+                localctx = musikParser.PlayTContext(self, localctx)
+                self.enterOuterAlt(localctx, 2)
+                self.state = 113
+                self.match(musikParser.T__21)
+                self.state = 114
+                self.sound()
+                self.state = 115
+                self.num(0)
+                pass
+            elif token in [23]:
                 localctx = musikParser.PrintTContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 115
-                self.match(musikParser.T__21)
-                self.state = 116
+                self.state = 117
+                self.match(musikParser.T__22)
+                self.state = 118
                 self.expr()
                 pass
             else:
@@ -1489,23 +1525,23 @@ class musikParser ( Parser ):
 
     def num_sempred(self, localctx:NumContext, predIndex:int):
             if predIndex == 0:
-                return self.precpred(self._ctx, 6)
+                return self.precpred(self._ctx, 7)
          
 
             if predIndex == 1:
-                return self.precpred(self._ctx, 5)
+                return self.precpred(self._ctx, 6)
          
 
             if predIndex == 2:
-                return self.precpred(self._ctx, 4)
+                return self.precpred(self._ctx, 5)
          
 
             if predIndex == 3:
-                return self.precpred(self._ctx, 3)
+                return self.precpred(self._ctx, 4)
          
 
             if predIndex == 4:
-                return self.precpred(self._ctx, 2)
+                return self.precpred(self._ctx, 3)
          
 
 

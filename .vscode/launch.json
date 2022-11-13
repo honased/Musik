@@ -5,13 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "track1",
             "type": "python",
             "request": "launch",
             "program": "main.py",
             "console": "integratedTerminal",
-            "args": ["test2.musik"],
+            "args": ["tracks/track1.musik"],
             "justMyCode": true
-        }
+        },
+        {
+            "name": "track2",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": ["tracks/track2.musik"],
+            "justMyCode": true
+        },
     ]
 }

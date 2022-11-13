@@ -27,7 +27,15 @@ class AntlrToExpr(MusikVisitor):
 
     # Visit a parse tree produced by musikParser#IfT.
     def visitIfT(self, ctx:MusikParser.IfTContext):
-        return self.visitChildren(ctx)
+        expressions = []
+        for expr in ctx.expr():
+            expressions.append(self.visit(expr))
+        return IfExpr(
+            self.visit(ctx.num()),
+            expressions)
+
+    def visitNotT(self, ctx: MusikParser.NotTContext):
+        return NotExpr(self.visit(ctx.num()))
 
     # Visit a parse tree produced by MusikParser#IdT.
     def visitIdNumT(self, ctx:MusikParser.IdNumTContext):

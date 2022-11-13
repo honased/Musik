@@ -64,6 +64,11 @@ class musikVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by musikParser#NotT.
+    def visitNotT(self, ctx:musikParser.NotTContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by musikParser#MinusT.
     def visitMinusT(self, ctx:musikParser.MinusTContext):
         return self.visitChildren(ctx)

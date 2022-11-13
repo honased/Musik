@@ -6,7 +6,15 @@ class Program:
         self.loops: list[LoopExpr] = loops
 
     async def run(self):
-        store = {}
+        store = {
+            'c5': 523,
+            'd5': 587,
+            'e5': 659,
+            'f5': 698,
+            'g5': 784,
+            'a5': 880,
+            'b5': 988,
+        }
         for declaration in self.declarations:
             await declaration.eval(store)
 

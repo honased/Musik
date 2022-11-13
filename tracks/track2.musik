@@ -1,0 +1,20 @@
+let cChord = mix mix sin_wave c5 sin_wave e5  sin_wave g5
+let dChord = mix mix sin_wave e5 sin_wave f5  sin_wave a5
+let counter = 1
+
+loop {
+    sleep 250
+    if not counter % 3 {
+        play cChord 250
+    }
+    --if not counter % 4 {
+    --    dChord = pitch_shift_semi dChord 2
+    --    cChord = pitch_shift_semi cChord 2
+    --}
+}
+
+loop {
+    counter = counter + 1
+    play dChord 125
+    sleep 250
+}

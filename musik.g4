@@ -21,13 +21,14 @@ val: num                                # NumT
     | sound                             # SoundT 
     ;
 
-num: ID # IdNumT 
+num: ID                                 # IdNumT 
     | num '*' num                       # MultT
     | num '/' num                       # DivT
     | num '%' num                       # ModT
     | num '+' num                       # AddT
     | num '-' num                       # MinusT
     | NUM                               # NumValT
+    | 'not' num                         # NotT
     ;
 
 sound: ID # IdSoundT

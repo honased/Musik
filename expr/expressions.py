@@ -40,8 +40,21 @@ class LoopExpr(Expr):
             await expr.eval(store)
 
 class IfExpr(Expr):
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, condition, expressions) -> None:
+        self.condition: Expr = condition
+        self.expressions: list[Expr] = expressions
+    
+    async def eval(self, store):
+        if (await self.condition.eval(store)):
+            for expr in self.expressions:
+                await expr.eval(store)
+
+class NotExpr(Expr):
+    def __init__(self, num) -> None:
+        self.num: Expr = num
+    
+    async def eval(self, store):
+        return not await self.num.eval(store)
 
 class LeftRightExpr(Expr):
     left = None
