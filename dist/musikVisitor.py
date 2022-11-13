@@ -109,6 +109,16 @@ class musikVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by musikParser#SawWaveT.
+    def visitSawWaveT(self, ctx:musikParser.SawWaveTContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by musikParser#TriangleWaveT.
+    def visitTriangleWaveT(self, ctx:musikParser.TriangleWaveTContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by musikParser#MixT.
     def visitMixT(self, ctx:musikParser.MixTContext):
         return self.visitChildren(ctx)
@@ -116,6 +126,11 @@ class musikVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by musikParser#PitchShiftT.
     def visitPitchShiftT(self, ctx:musikParser.PitchShiftTContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by musikParser#PitchShiftSemiT.
+    def visitPitchShiftSemiT(self, ctx:musikParser.PitchShiftSemiTContext):
         return self.visitChildren(ctx)
 
 

@@ -1,0 +1,29 @@
+let i = 0
+let j = 0
+
+let bass_snd = mix saw_wave 131 sin_wave 161.82
+let melody = square_wave 659
+
+loop {
+    play noise_wave 50 50
+    sleep 400
+}
+
+loop {
+    j = j + 1
+    j = j % 2
+    play pitch_shift_semi bass_snd j * 4 75
+    sleep 200
+}
+
+loop {
+    sleep 800
+    play melody 600
+    sleep 600
+    play pitch_shift_semi melody -2 200
+    sleep 200
+    play pitch_shift_semi melody -4 200
+    sleep 200
+    play pitch_shift_semi melody -5 600
+    sleep 800
+}

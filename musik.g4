@@ -34,8 +34,11 @@ sound: ID # IdSoundT
     | 'sin_wave' num                    # SinWaveT
     | 'square_wave' num                 # SquareWaveT
     | 'noise_wave' num                  # NoiseWaveT
+    | 'saw_wave' num                    # SawWaveT
+    | 'triangle_wave' num               # TriangleWaveT
     | 'mix' sound sound                 # MixT
     | 'pitch_shift' sound num           # PitchShiftT
+    | 'pitch_shift_semi' sound num      # PitchShiftSemiT
     ;
 
 func: 'sleep' num                       # SleepT

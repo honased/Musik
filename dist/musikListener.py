@@ -188,6 +188,24 @@ class musikListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by musikParser#SawWaveT.
+    def enterSawWaveT(self, ctx:musikParser.SawWaveTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#SawWaveT.
+    def exitSawWaveT(self, ctx:musikParser.SawWaveTContext):
+        pass
+
+
+    # Enter a parse tree produced by musikParser#TriangleWaveT.
+    def enterTriangleWaveT(self, ctx:musikParser.TriangleWaveTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#TriangleWaveT.
+    def exitTriangleWaveT(self, ctx:musikParser.TriangleWaveTContext):
+        pass
+
+
     # Enter a parse tree produced by musikParser#MixT.
     def enterMixT(self, ctx:musikParser.MixTContext):
         pass
@@ -203,6 +221,15 @@ class musikListener(ParseTreeListener):
 
     # Exit a parse tree produced by musikParser#PitchShiftT.
     def exitPitchShiftT(self, ctx:musikParser.PitchShiftTContext):
+        pass
+
+
+    # Enter a parse tree produced by musikParser#PitchShiftSemiT.
+    def enterPitchShiftSemiT(self, ctx:musikParser.PitchShiftSemiTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#PitchShiftSemiT.
+    def exitPitchShiftSemiT(self, ctx:musikParser.PitchShiftSemiTContext):
         pass
 
 

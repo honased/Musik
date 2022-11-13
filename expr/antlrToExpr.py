@@ -93,6 +93,16 @@ class AntlrToExpr(MusikVisitor):
         num = ctx.num()
         return NoiseWaveExpr(self.visit(num))
 
+    # Visit a parse tree produced by MusikParser#SawWaveT.
+    def visitSawWaveT(self, ctx:MusikParser.SawWaveTContext):
+        num = ctx.num()
+        return SawWaveExpr(self.visit(num))
+
+    # Visit a parse tree produced by MusikParser#TriangleWaveT.
+    def visitTriangleWaveT(self, ctx:MusikParser.TriangleWaveTContext):
+        num = ctx.num()
+        return TriangleWaveExpr(self.visit(num))
+
     # Visit a parse tree produced by MusikParser#MixT.
     def visitMixT(self, ctx:MusikParser.MixTContext):
         return MixExpr(self.visit(ctx.sound()[0]), self.visit(ctx.sound()[1]))
@@ -100,6 +110,10 @@ class AntlrToExpr(MusikVisitor):
     # Visit a parse tree produced by MusikParser#PitchShiftT.
     def visitPitchShiftT(self, ctx:MusikParser.PitchShiftTContext):
         return PitchShiftExpr(self.visit(ctx.sound()), self.visit(ctx.num()))
+
+    # Visit a parse tree produced by MusikParser#PitchShiftSemiT.
+    def visitPitchShiftSemiT(self, ctx:MusikParser.PitchShiftSemiTContext):
+        return PitchShiftSemiExpr(self.visit(ctx.sound()), self.visit(ctx.num()))
 
     # Visit a parse tree produced by MusikParser#SleepT.
     def visitSleepT(self, ctx:MusikParser.SleepTContext):

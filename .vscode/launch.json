@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "main.py",
             "console": "integratedTerminal",
-            "args": ["test.musik"],
+            "args": ["test2.musik"],
             "justMyCode": true
         }
     ]

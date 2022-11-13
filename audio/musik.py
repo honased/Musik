@@ -14,6 +14,15 @@ def square_wave(time, freq):
     if sine_wave(time, freq) >= 0.0: return 1.0
     return -1.0
 
+def saw_wave(time, freq):
+    return (2 * (time * freq - math.floor(time * freq + 0.5)))
+
+def triangle_wave(time, freq):
+    val = saw_wave(time, freq) 
+    if val < 0: val *= -1
+    val = val * 2.0 - 1.0
+    return val
+
 def noise_wave(time, freq):
     return (random.random() * 2) - 1
 
@@ -55,6 +64,12 @@ def square_wave_sound(val):
 
 def noise_wave_sound(val):
     return Sound([noise_wave], [val])
+
+def saw_wave_sound(val):
+    return Sound([saw_wave], [val])
+
+def triangle_wave_sound(val):
+    return Sound([triangle_wave], [val])
 
 def mix_sounds(s1: Sound, s2: Sound) -> Sound:
     return Sound(s1.get_samplers() + s2.get_samplers(), s1.get_frequencies() + s2.get_frequencies())

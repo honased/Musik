@@ -69,8 +69,7 @@ class ModExpr(LeftRightExpr):
 class MinusExpr(LeftRightExpr):
     async def eval(self, store):
         val = await self.left.eval(store) - await self.right.eval(store)
-        if val < 0: return 0
-        else: return val
+        return val
 
 class NumValExpr(Expr):
     num = None
@@ -104,6 +103,22 @@ class NoiseWaveExpr(Expr):
     async def eval(self, store):
         return audio.musik.noise_wave_sound(await self.interval.eval(store))
 
+class SawWaveExpr(Expr):
+    interval = None
+    def __init__(self, interval) -> None:
+        self.interval = interval
+
+    async def eval(self, store):
+        return audio.musik.saw_wave_sound(await self.interval.eval(store))
+
+class TriangleWaveExpr(Expr):
+    interval = None
+    def __init__(self, interval) -> None:
+        self.interval = interval
+
+    async def eval(self, store):
+        return audio.musik.triangle_wave_sound(await self.interval.eval(store))
+
 class PlayExpr(Expr):
     sound = None
     time = None
@@ -127,6 +142,18 @@ class PitchShiftExpr(Expr):
         snd = await self.sound.eval(store)
         pitch = await self.pitch.eval(store)
         return audio.musik.pitch_shift(snd, pitch)
+
+class PitchShiftSemiExpr(Expr):
+    sound = None
+    pitch = None
+    def __init__(self, sound, pitch) -> None:
+        self.sound = sound
+        self.pitch = pitch
+
+    async def eval(self, store):
+        snd = await self.sound.eval(store)
+        pitch = await self.pitch.eval(store)
+        return audio.musik.pitch_shift_semi(snd, pitch)
 
 class MixExpr(Expr):
     sound1 = None
