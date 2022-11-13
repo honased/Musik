@@ -1,0 +1,29 @@
+let i = 0
+
+let melody = triangle_wave 262
+let square = square_wave 262
+let weird_noise = mix noise_wave 100 sin_wave 100
+
+loop {
+    play melody 400
+    sleep 400
+    play mix pitch_shift_semi melody 4 square 400
+    sleep 400
+    play mix pitch_shift_semi melody 7 square 400
+    sleep 400
+    play mix pitch_shift_semi melody 9 square 400
+    sleep 400
+    play mix pitch_shift_semi melody 12 square 400
+    sleep 400
+}
+
+loop {
+    play weird_noise 300
+    if not i % 2 {
+        sleep 800
+    }
+    if i % 2 {
+        sleep 400
+    }
+    i = i + 1
+}

@@ -22,5 +22,23 @@
             "args": ["tracks/track2.musik"],
             "justMyCode": true
         },
+        {
+            "name": "track3",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": ["tracks/track3.musik"],
+            "justMyCode": true
+        },
+        {
+            "name": "track4",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": ["tracks/track4.musik"],
+            "justMyCode": true
+        },
     ]
 }
