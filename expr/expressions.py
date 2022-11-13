@@ -1,4 +1,5 @@
 import asyncio
+import audio.musik
 
 class Expr:
     async def eval(self, store):
@@ -65,6 +66,12 @@ class ModExpr(LeftRightExpr):
     async def eval(self, store):
         return await self.left.eval(store) % await self.right.eval(store)
 
+class MinusExpr(LeftRightExpr):
+    async def eval(self, store):
+        val = await self.left.eval(store) - await self.right.eval(store)
+        if val < 0: return 0
+        else: return val
+
 class NumValExpr(Expr):
     num = None
     def __init__(self, num) -> None:
@@ -78,12 +85,20 @@ class SinWaveExpr(Expr):
     def __init__(self, interval) -> None:
         self.interval = interval
 
+    async def eval(self, store):
+        return audio.musik.sine_wave_sound(await self.interval.eval(store))
+
 class PlayExpr(Expr):
     sound = None
     time = None
     def __init__(self, sound, time) -> None:
         self.sound = sound
         self.time = time
+
+    async def eval(self, store):
+        snd = await self.sound.eval(store)
+        tm = await self.time.eval(store)
+        audio.musik.MusicManager.play_sound(snd, tm)
 
 class SleepExpr(Expr):
     def __init__(self, time: Expr) -> None:

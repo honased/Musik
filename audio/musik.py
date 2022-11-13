@@ -78,7 +78,9 @@ class MusicManager:
 
         for sound in MusicManager.sounds.copy():
             if not sound.get_alive():
+                print(len(MusicManager.sounds))
                 MusicManager.sounds.remove(sound)
+                print(len(MusicManager.sounds))
 
         samples = numpy.int16(samples).tobytes()
 

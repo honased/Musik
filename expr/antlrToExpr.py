@@ -46,7 +46,10 @@ class AntlrToExpr(MusikVisitor):
 
     # Visit a parse tree produced by MusikParser#MinusT.
     def visitMinusT(self, ctx:MusikParser.MinusTContext):
-        return self.visitChildren(ctx)
+        num = ctx.num()
+        return MinusExpr(
+            self.visit(num[0]),
+            self.visit(num[1]))
 
     # Visit a parse tree produced by MusikParser#ModT.
     def visitModT(self, ctx:MusikParser.ModTContext):
@@ -77,7 +80,8 @@ class AntlrToExpr(MusikVisitor):
 
     # Visit a parse tree produced by MusikParser#SinWaveT.
     def visitSinWaveT(self, ctx:MusikParser.SinWaveTContext):
-        return self.visitChildren(ctx)
+        num = ctx.num()
+        return SinWaveExpr(self.visit(num))
 
     # Visit a parse tree produced by MusikParser#SquareWaveT.
     def visitSquareWaveT(self, ctx:MusikParser.SquareWaveTContext):
@@ -97,7 +101,7 @@ class AntlrToExpr(MusikVisitor):
 
     # Visit a parse tree produced by MusikParser#PlayT.
     def visitPlayT(self, ctx:MusikParser.PlayTContext):
-        return self.visitChildren(ctx)
-
+        return PlayExpr(self.visit(ctx.sound()), self.visit(ctx.num()))
+        
     def visitPrintT(self, ctx:MusikParser.PrintTContext):
         return PrintExpr(self.visit(ctx.expr()))
