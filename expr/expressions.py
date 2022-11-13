@@ -38,6 +38,10 @@ class LoopExpr(Expr):
         for expr in self.expressions:
             await expr.eval(store)
 
+class IfExpr(Expr):
+    def __init__(self) -> None:
+        super().__init__()
+
 class LeftRightExpr(Expr):
     left = None
     right = None

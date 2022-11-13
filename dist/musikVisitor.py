@@ -24,6 +24,11 @@ class musikVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by musikParser#IfT.
+    def visitIfT(self, ctx:musikParser.IfTContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by musikParser#AssignT.
     def visitAssignT(self, ctx:musikParser.AssignTContext):
         return self.visitChildren(ctx)

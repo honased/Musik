@@ -11,7 +11,8 @@ loop: 'loop' '{' expr+ '}'              # LoopT
     ;
 
 // ANTLR resolves ambiguities in favor of the alternative given first.
-expr: ID '=' val                        # AssignT
+expr: 'if' num '{' expr+ '}'            # IfT
+    | ID '=' val                        # AssignT
     | func                              # FuncT
     | val                               # ValT
     ;
@@ -37,7 +38,7 @@ sound: ID # IdSoundT
     ;
 
 func: 'sleep' num                       # SleepT
-    | 'play' sound                      # PlayT
+    | 'play' sound num                  # PlayT
     | 'print' expr                      # PrintT
     ;
 

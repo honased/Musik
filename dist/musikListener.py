@@ -35,6 +35,15 @@ class musikListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by musikParser#IfT.
+    def enterIfT(self, ctx:musikParser.IfTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#IfT.
+    def exitIfT(self, ctx:musikParser.IfTContext):
+        pass
+
+
     # Enter a parse tree produced by musikParser#AssignT.
     def enterAssignT(self, ctx:musikParser.AssignTContext):
         pass
