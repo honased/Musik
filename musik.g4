@@ -33,6 +33,7 @@ num: ID # IdNumT
 sound: ID # IdSoundT
     | 'sin_wave' num                    # SinWaveT
     | 'square_wave' num                 # SquareWaveT
+    | 'noise_wave' num                  # NoiseWaveT
     | 'mix' sound sound                 # MixT
     | 'pitch_shift' sound num           # PitchShiftT
     ;

@@ -1,13 +1,24 @@
 let i = 5 - 6
 let i = 2 * 6
+let snd = square_wave 300
+let snd2 = mix snd square_wave 400
+
 loop {
-    print i % 2
-    play_sound sin_wave 500 100
-    i = i + 1
-    sleep 2000
+    sleep 500
+    play noise_wave 50 100
+    sleep 500
 }
 
 loop {
-    print 3
-    sleep 4000
+    play square_wave 50 50
+    sleep 500
+}
+
+loop {
+    play pitch_shift snd2 i * 50 50
+    --play snd2 75
+    i = i + 1
+    i = i % 5
+    print i
+    sleep 100
 }

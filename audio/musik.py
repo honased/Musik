@@ -1,6 +1,7 @@
 import math
 import numpy
 import pyaudio
+import random
 
 SAMPLE_RATE = 44100
 BUFFER_SIZE = 200
@@ -12,6 +13,9 @@ def sine_wave(time, freq):
 def square_wave(time, freq):
     if sine_wave(time, freq) >= 0.0: return 1.0
     return -1.0
+
+def noise_wave(time, freq):
+    return (random.random() * 2) - 1
 
 class Sound():
     def __init__(self, samplers, frequencies) -> None:
@@ -49,6 +53,9 @@ def sine_wave_sound(val):
 def square_wave_sound(val):
     return Sound([square_wave], [val])
 
+def noise_wave_sound(val):
+    return Sound([noise_wave], [val])
+
 def mix_sounds(s1: Sound, s2: Sound) -> Sound:
     return Sound(s1.get_samplers() + s2.get_samplers(), s1.get_frequencies() + s2.get_frequencies())
 
@@ -78,9 +85,7 @@ class MusicManager:
 
         for sound in MusicManager.sounds.copy():
             if not sound.get_alive():
-                print(len(MusicManager.sounds))
                 MusicManager.sounds.remove(sound)
-                print(len(MusicManager.sounds))
 
         samples = numpy.int16(samples).tobytes()
 

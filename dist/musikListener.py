@@ -179,6 +179,15 @@ class musikListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by musikParser#NoiseWaveT.
+    def enterNoiseWaveT(self, ctx:musikParser.NoiseWaveTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#NoiseWaveT.
+    def exitNoiseWaveT(self, ctx:musikParser.NoiseWaveTContext):
+        pass
+
+
     # Enter a parse tree produced by musikParser#MixT.
     def enterMixT(self, ctx:musikParser.MixTContext):
         pass

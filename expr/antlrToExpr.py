@@ -35,7 +35,7 @@ class AntlrToExpr(MusikVisitor):
 
     # Visit a parse tree produced by MusikParser#IdT.
     def visitIdSoundT(self, ctx:MusikParser.IdSoundTContext):
-        return VariableExpr(ctx.ID.getText())
+        return VariableExpr(ctx.ID().getText())
 
     # Visit a parse tree produced by MusikParser#DivT.
     def visitDivT(self, ctx:MusikParser.DivTContext):
@@ -85,15 +85,21 @@ class AntlrToExpr(MusikVisitor):
 
     # Visit a parse tree produced by MusikParser#SquareWaveT.
     def visitSquareWaveT(self, ctx:MusikParser.SquareWaveTContext):
-        return self.visitChildren(ctx)
+        num = ctx.num()
+        return SquareWaveExpr(self.visit(num))
+
+    # Visit a parse tree produced by MusikParser#NoiseWaveT.
+    def visitNoiseWaveT(self, ctx:MusikParser.NoiseWaveTContext):
+        num = ctx.num()
+        return NoiseWaveExpr(self.visit(num))
 
     # Visit a parse tree produced by MusikParser#MixT.
     def visitMixT(self, ctx:MusikParser.MixTContext):
-        return self.visitChildren(ctx)
+        return MixExpr(self.visit(ctx.sound()[0]), self.visit(ctx.sound()[1]))
 
     # Visit a parse tree produced by MusikParser#PitchShiftT.
     def visitPitchShiftT(self, ctx:MusikParser.PitchShiftTContext):
-        return self.visitChildren(ctx)
+        return PitchShiftExpr(self.visit(ctx.sound()), self.visit(ctx.num()))
 
     # Visit a parse tree produced by MusikParser#SleepT.
     def visitSleepT(self, ctx:MusikParser.SleepTContext):

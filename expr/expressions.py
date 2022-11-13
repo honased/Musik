@@ -88,6 +88,22 @@ class SinWaveExpr(Expr):
     async def eval(self, store):
         return audio.musik.sine_wave_sound(await self.interval.eval(store))
 
+class SquareWaveExpr(Expr):
+    interval = None
+    def __init__(self, interval) -> None:
+        self.interval = interval
+
+    async def eval(self, store):
+        return audio.musik.square_wave_sound(await self.interval.eval(store))
+
+class NoiseWaveExpr(Expr):
+    interval = None
+    def __init__(self, interval) -> None:
+        self.interval = interval
+
+    async def eval(self, store):
+        return audio.musik.noise_wave_sound(await self.interval.eval(store))
+
 class PlayExpr(Expr):
     sound = None
     time = None
@@ -99,6 +115,30 @@ class PlayExpr(Expr):
         snd = await self.sound.eval(store)
         tm = await self.time.eval(store)
         audio.musik.MusicManager.play_sound(snd, tm)
+
+class PitchShiftExpr(Expr):
+    sound = None
+    pitch = None
+    def __init__(self, sound, pitch) -> None:
+        self.sound = sound
+        self.pitch = pitch
+
+    async def eval(self, store):
+        snd = await self.sound.eval(store)
+        pitch = await self.pitch.eval(store)
+        return audio.musik.pitch_shift(snd, pitch)
+
+class MixExpr(Expr):
+    sound1 = None
+    sound2 = None
+    def __init__(self, sound1, sound2) -> None:
+        self.sound1 = sound1
+        self.sound2 = sound2
+
+    async def eval(self, store):
+        snd1 = await self.sound1.eval(store)
+        snd2 = await self.sound2.eval(store)
+        return audio.musik.mix_sounds(snd1, snd2)
 
 class SleepExpr(Expr):
     def __init__(self, time: Expr) -> None:

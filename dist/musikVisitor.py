@@ -104,6 +104,11 @@ class musikVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by musikParser#NoiseWaveT.
+    def visitNoiseWaveT(self, ctx:musikParser.NoiseWaveTContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by musikParser#MixT.
     def visitMixT(self, ctx:musikParser.MixTContext):
         return self.visitChildren(ctx)
