@@ -35,12 +35,39 @@ class musikListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by musikParser#AssignT.
+    def enterAssignT(self, ctx:musikParser.AssignTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#AssignT.
+    def exitAssignT(self, ctx:musikParser.AssignTContext):
+        pass
+
+
     # Enter a parse tree produced by musikParser#FuncT.
     def enterFuncT(self, ctx:musikParser.FuncTContext):
         pass
 
     # Exit a parse tree produced by musikParser#FuncT.
     def exitFuncT(self, ctx:musikParser.FuncTContext):
+        pass
+
+
+    # Enter a parse tree produced by musikParser#ValT.
+    def enterValT(self, ctx:musikParser.ValTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#ValT.
+    def exitValT(self, ctx:musikParser.ValTContext):
+        pass
+
+
+    # Enter a parse tree produced by musikParser#NumT.
+    def enterNumT(self, ctx:musikParser.NumTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#NumT.
+    def exitNumT(self, ctx:musikParser.NumTContext):
         pass
 
 
@@ -53,30 +80,12 @@ class musikListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by musikParser#NumberT.
-    def enterNumberT(self, ctx:musikParser.NumberTContext):
+    # Enter a parse tree produced by musikParser#IdNumT.
+    def enterIdNumT(self, ctx:musikParser.IdNumTContext):
         pass
 
-    # Exit a parse tree produced by musikParser#NumberT.
-    def exitNumberT(self, ctx:musikParser.NumberTContext):
-        pass
-
-
-    # Enter a parse tree produced by musikParser#AssignT.
-    def enterAssignT(self, ctx:musikParser.AssignTContext):
-        pass
-
-    # Exit a parse tree produced by musikParser#AssignT.
-    def exitAssignT(self, ctx:musikParser.AssignTContext):
-        pass
-
-
-    # Enter a parse tree produced by musikParser#IdT.
-    def enterIdT(self, ctx:musikParser.IdTContext):
-        pass
-
-    # Exit a parse tree produced by musikParser#IdT.
-    def exitIdT(self, ctx:musikParser.IdTContext):
+    # Exit a parse tree produced by musikParser#IdNumT.
+    def exitIdNumT(self, ctx:musikParser.IdNumTContext):
         pass
 
 
@@ -131,6 +140,15 @@ class musikListener(ParseTreeListener):
 
     # Exit a parse tree produced by musikParser#AddT.
     def exitAddT(self, ctx:musikParser.AddTContext):
+        pass
+
+
+    # Enter a parse tree produced by musikParser#IdSoundT.
+    def enterIdSoundT(self, ctx:musikParser.IdSoundTContext):
+        pass
+
+    # Exit a parse tree produced by musikParser#IdSoundT.
+    def exitIdSoundT(self, ctx:musikParser.IdSoundTContext):
         pass
 
 

@@ -14,7 +14,7 @@ class DeclarationExpr(Expr):
     async def eval(self, store):
         store[self.id] = await self.expression.eval(store)
 
-class UpdateExpr(Expr):
+class AssignExpr(Expr):
     def __init__(self, id, val) -> None:
         self.id = id
         self.val = val
@@ -49,6 +49,18 @@ class AddExpr(LeftRightExpr):
     async def eval(self, store):
         return await self.left.eval(store) + await self.right.eval(store)
 
+class MultExpr(LeftRightExpr):
+    async def eval(self, store):
+        return await self.left.eval(store) * await self.right.eval(store)
+
+class DivExpr(LeftRightExpr):
+    async def eval(self, store):
+        return await self.left.eval(store) / await self.right.eval(store)
+
+class ModExpr(LeftRightExpr):
+    async def eval(self, store):
+        return await self.left.eval(store) % await self.right.eval(store)
+
 class NumValExpr(Expr):
     num = None
     def __init__(self, num) -> None:
@@ -75,7 +87,6 @@ class SleepExpr(Expr):
 
     async def eval(self, store):
         await asyncio.sleep(await self.time.eval(store) / 1000.0)
-        return None
 
 class PrintExpr(Expr):
     def __init__(self, expression) -> None:

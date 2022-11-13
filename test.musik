@@ -1,6 +1,7 @@
-let i = 2 + 2
+let i = 2 * 6
 loop {
-    print i
+    print i + 1
+    i = i * 2
     sleep 2000
 }
 

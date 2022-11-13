@@ -24,8 +24,23 @@ class musikVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by musikParser#AssignT.
+    def visitAssignT(self, ctx:musikParser.AssignTContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by musikParser#FuncT.
     def visitFuncT(self, ctx:musikParser.FuncTContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by musikParser#ValT.
+    def visitValT(self, ctx:musikParser.ValTContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by musikParser#NumT.
+    def visitNumT(self, ctx:musikParser.NumTContext):
         return self.visitChildren(ctx)
 
 
@@ -34,18 +49,8 @@ class musikVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by musikParser#NumberT.
-    def visitNumberT(self, ctx:musikParser.NumberTContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by musikParser#AssignT.
-    def visitAssignT(self, ctx:musikParser.AssignTContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by musikParser#IdT.
-    def visitIdT(self, ctx:musikParser.IdTContext):
+    # Visit a parse tree produced by musikParser#IdNumT.
+    def visitIdNumT(self, ctx:musikParser.IdNumTContext):
         return self.visitChildren(ctx)
 
 
@@ -76,6 +81,11 @@ class musikVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by musikParser#AddT.
     def visitAddT(self, ctx:musikParser.AddTContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by musikParser#IdSoundT.
+    def visitIdSoundT(self, ctx:musikParser.IdSoundTContext):
         return self.visitChildren(ctx)
 
 

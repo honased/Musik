@@ -8,18 +8,19 @@ class AntlrToExpr(MusikVisitor):
     # Visit a parse tree produced by MusikParser#DeclareNumT.
     def visitDeclareT(self, ctx:MusikParser.DeclareTContext):
         id = ctx.ID().getText()
-        num = ctx.num()
-        numExpr = self.visit(ctx.num())
+        numExpr = self.visit(ctx.val())
         # error handling
         return DeclarationExpr(id, numExpr)
+
+    def visitAssignT(self, ctx: MusikParser.AssignTContext):
+        return (AssignExpr(ctx.ID().getText(), self.visit(ctx.val())))
 
     # Visit a parse tree produced by MusikParser#LoopT.
     def visitLoopT(self, ctx:MusikParser.LoopTContext):
         expressions = []
-        for i in range(ctx.getChildCount()):
-            node = ctx.getChild(i)
+        for node in ctx.expr():
             if not isinstance(node, TerminalNode):
-                expressions.append(self.visit(ctx.getChild(i)))
+                expressions.append(self.visit(node))
         return LoopExpr(expressions)
 
     # Visit a parse tree produced by MusikParser#FuncT.
@@ -30,21 +31,20 @@ class AntlrToExpr(MusikVisitor):
     def visitSoundT(self, ctx:MusikParser.SoundTContext):
         return self.visitChildren(ctx)
 
-    # Visit a parse tree produced by MusikParser#NumberT.
-    def visitNumberT(self, ctx:MusikParser.NumberTContext):
-        return self.visitChildren(ctx)
-
-    # Visit a parse tree produced by MusikParser#AssignT.
-    def visitAssignT(self, ctx:MusikParser.AssignTContext):
-        return self.visitChildren(ctx)
+    # Visit a parse tree produced by MusikParser#IdT.
+    def visitIdNumT(self, ctx:MusikParser.IdNumTContext):
+        return VariableExpr(ctx.ID().getText())
 
     # Visit a parse tree produced by MusikParser#IdT.
-    def visitIdT(self, ctx:MusikParser.IdTContext):
-        return VariableExpr(ctx.ID().getText())
+    def visitIdSoundT(self, ctx:MusikParser.IdSoundTContext):
+        return VariableExpr(ctx.ID.getText())
 
     # Visit a parse tree produced by MusikParser#DivT.
     def visitDivT(self, ctx:MusikParser.DivTContext):
-        return self.visitChildren(ctx)
+        num = ctx.num()
+        return DivExpr(
+            self.visit(num[0]),
+            self.visit(num[1]))
 
     # Visit a parse tree produced by MusikParser#MinusT.
     def visitMinusT(self, ctx:MusikParser.MinusTContext):
@@ -52,11 +52,17 @@ class AntlrToExpr(MusikVisitor):
 
     # Visit a parse tree produced by MusikParser#ModT.
     def visitModT(self, ctx:MusikParser.ModTContext):
-        return self.visitChildren(ctx)
+        num = ctx.num()
+        return ModExpr(
+            self.visit(num[0]),
+            self.visit(num[1]))
 
     # Visit a parse tree produced by MusikParser#MultT.
     def visitMultT(self, ctx:MusikParser.MultTContext):
-        return self.visitChildren(ctx)
+        num = ctx.num()
+        return MultExpr(
+            self.visit(num[0]),
+            self.visit(num[1]))
 
     # Visit a parse tree produced by MusikParser#NumValT.
     def visitNumValT(self, ctx:MusikParser.NumValTContext):
