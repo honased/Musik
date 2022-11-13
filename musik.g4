@@ -1,15 +1,17 @@
 grammar musik;
 
 // start var
-prog: (decl | expr)+ EOF
+prog: (decl | loop)+ EOF
     ;
 
-decl: 'let' ID '=' val       # DeclareT
+decl: 'let' ID '=' val                  # DeclareT
+    ;
+
+loop: 'loop' '{' expr+ '}'              # LoopT
     ;
 
 // ANTLR resolves ambiguities in favor of the alternative given first.
-expr: 'loop' '{' expr+ '}'              # LoopT
-    | ID '=' val                        # AssignT
+expr: ID '=' val                        # AssignT
     | func                              # FuncT
     | val                               # ValT
     ;
@@ -19,7 +21,7 @@ val: num                                # NumT
     ;
 
 num: ID # IdNumT 
-    | num '*' num                        # MultT
+    | num '*' num                       # MultT
     | num '/' num                       # DivT
     | num '%' num                       # ModT
     | num '+' num                       # AddT
@@ -28,7 +30,7 @@ num: ID # IdNumT
     ;
 
 sound: ID # IdSoundT
-    | 'sin_wave' num                   # SinWaveT
+    | 'sin_wave' num                    # SinWaveT
     | 'square_wave' num                 # SquareWaveT
     | 'mix' sound sound                 # MixT
     | 'pitch_shift' sound num           # PitchShiftT

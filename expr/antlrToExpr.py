@@ -8,12 +8,14 @@ class AntlrToExpr(MusikVisitor):
     # Visit a parse tree produced by MusikParser#DeclareNumT.
     def visitDeclareT(self, ctx:MusikParser.DeclareTContext):
         id = ctx.ID().getText()
-        numExpr = self.visit(ctx.val())
+        valExpr = self.visit(ctx.val())
         # error handling
-        return DeclarationExpr(id, numExpr)
+        return DeclarationExpr(id, valExpr)
 
     def visitAssignT(self, ctx: MusikParser.AssignTContext):
-        return (AssignExpr(ctx.ID().getText(), self.visit(ctx.val())))
+        return (AssignExpr(
+            ctx.ID().getText(),
+            self.visit(ctx.val())))
 
     # Visit a parse tree produced by MusikParser#LoopT.
     def visitLoopT(self, ctx:MusikParser.LoopTContext):
@@ -22,14 +24,6 @@ class AntlrToExpr(MusikVisitor):
             if not isinstance(node, TerminalNode):
                 expressions.append(self.visit(node))
         return LoopExpr(expressions)
-
-    # Visit a parse tree produced by MusikParser#FuncT.
-    def visitFuncT(self, ctx:MusikParser.FuncTContext):
-        return self.visitChildren(ctx)
-
-    # Visit a parse tree produced by MusikParser#SoundT.
-    def visitSoundT(self, ctx:MusikParser.SoundTContext):
-        return self.visitChildren(ctx)
 
     # Visit a parse tree produced by MusikParser#IdT.
     def visitIdNumT(self, ctx:MusikParser.IdNumTContext):
@@ -64,17 +58,18 @@ class AntlrToExpr(MusikVisitor):
             self.visit(num[0]),
             self.visit(num[1]))
 
-    # Visit a parse tree produced by MusikParser#NumValT.
-    def visitNumValT(self, ctx:MusikParser.NumValTContext):
-        num = int(ctx.NUM().getText())
-        return NumValExpr(num)
-
     # Visit a parse tree produced by MusikParser#AddT.
     def visitAddT(self, ctx:MusikParser.AddTContext):
         num = ctx.num()
         return AddExpr(
             self.visit(num[0]),
             self.visit(num[1]))
+            
+    # Visit a parse tree produced by MusikParser#NumValT.
+    def visitNumValT(self, ctx:MusikParser.NumValTContext):
+        num = int(ctx.NUM().getText())
+        return NumValExpr(num)
+
 
     # Visit a parse tree produced by MusikParser#SinWaveT.
     def visitSinWaveT(self, ctx:MusikParser.SinWaveTContext):
