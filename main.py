@@ -1,24 +1,28 @@
-import pyaudio
-import wave
-import time
+from antlr4 import CommonTokenStream, InputStream
+from dist.musikParser import musikParser as MusikParser
+from dist.musikLexer import musikLexer as MusikLexer
+from expr.antlrToProgram import AntlrToProgram
 import sys
-import math
-import numpy
-import musik
+import asyncio
 
-sound = musik.sine_wave_sound(196)
-sound = musik.mix_sounds(sound, musik.square_wave_sound(161.8))
-sound = musik.pitch_shift_semi(sound, 1)
+def __main__():
+    fileName = sys.argv[1]
+    exprParser = getParser(fileName)
+    antlrAST = exprParser.prog()
+    prog = AntlrToProgram().visit(antlrAST)
 
-sounds = []
-sounds.append(sound)
-sounds.append(musik.sine_wave_sound(500.8))
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(prog.run())
+    
+def getParser(fileName: str) -> MusikParser:
+    data = None
+    with open(fileName) as f:
+        data = f.read()
+    input = InputStream(data)
+    lexer = MusikLexer(input)
+    tokens = CommonTokenStream(lexer)
+    return MusikParser(tokens)
 
-musik.MusicManager.start_up()
 
-while musik.MusicManager.is_active():
-    musik.MusicManager.play_sound(sound, 50)
-    sound = musik.pitch_shift_semi(sound, 1)
-    time.sleep(0.1)
-
-musik.MusicManager.shut_down()
+if __name__ == '__main__':
+    __main__()
